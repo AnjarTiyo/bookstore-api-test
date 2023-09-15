@@ -1,0 +1,21 @@
+{
+  "name": "dot-wdio-api",
+  "version": "1.0.0",
+  "description": "API Test using wdio",
+  "scripts": {
+    "wdio": "wdio run ./wdio.conf.js"
+  },
+  "author": "Anjar Tiyo Saputro",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.22.15",
+    "@babel/register": "^7.22.15",
+    "@wdio/allure-reporter": "^8.16.7",
+    "@wdio/cli": "^8.16.7",
+    "@wdio/local-runner": "^8.16.7",
+    "@wdio/mocha-framework": "^8.16.7",
+    "@wdio/spec-reporter": "^8.16.7",
+    "dotenv": "^16.3.1",
+    "supertest": "^6.3.3"
+  }
+}
