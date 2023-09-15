@@ -3,7 +3,7 @@ const { deleteBookCollection } = require("./delete-book.endpoint");
 
 require("dotenv").config();
 
-async function storeBook(basicToken, UUID, isbn, safeMode = false) {
+async function storeBook(basicToken, userId, isbn, safeMode = false) {
 	const headers = {
 		"Content-Type": "application/json",
 		"accept": "application/json",
@@ -11,7 +11,7 @@ async function storeBook(basicToken, UUID, isbn, safeMode = false) {
 	};
 
 	const payload = {
-		"userId": UUID,
+		"userId": userId,
 		"collectionOfIsbns": [
 			{
 				"isbn": isbn
@@ -21,7 +21,9 @@ async function storeBook(basicToken, UUID, isbn, safeMode = false) {
 
 	try {
 		if (safeMode) {
-			await deleteBookCollection(basicToken, UUID);
+			// console.log('Deleting existing data ...');
+			await deleteBookCollection(basicToken, userId);
+			// console.log('Data is deleted ...');
 		}
 
 		return await supertest(process.env.BASE_URL)
