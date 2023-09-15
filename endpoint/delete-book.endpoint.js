@@ -16,7 +16,7 @@ async function deleteBookCollection(token, userId) {
 			.set(headers)
 			.query(query);
 	} catch (error) {
-		console.error(error);
+		console.log(error);
 	}
 }
 

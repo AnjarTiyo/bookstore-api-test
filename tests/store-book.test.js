@@ -21,7 +21,7 @@ describe("Feature: POST Store Book to User", () => {
 	});
 
 	it("Store already stored isbn", async () => {
-		await storeBook(basicToken, validUuid, listOfBook[0], false);
+		await storeBook(basicToken, validUuid, listOfBook[0], true);
 
 		const res = await storeBook(basicToken, validUuid, listOfBook[0], false);
 
