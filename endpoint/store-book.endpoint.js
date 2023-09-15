@@ -21,7 +21,6 @@ async function storeBook(basicToken, UUID, isbn, safeMode = false) {
 
     try {
         if (safeMode) {
-            console.log('Deleting data ...')
             await deleteBookCollection(basicToken, UUID);
         }
 
