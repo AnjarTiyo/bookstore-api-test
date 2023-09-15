@@ -4,12 +4,17 @@
   "description": "DOT (Bookstore) API test using Mocha-Chai",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watch-all"
+    "test": "jest --watch-all",
+    "lint": "eslint .",
+    "lint:fix": "eslint --fix ."
   },
   "author": "Anjar Tiyo",
   "license": "ISC",
   "devDependencies": {
     "dotenv": "^16.3.1",
+    "eslint": "^8.49.0",
+    "eslint-plugin-jest": "^27.2.3",
+    "eslint-plugin-node": "^11.1.0",
     "jest": "^29.7.0",
     "supertest": "^6.3.3"
   }
