@@ -1,0 +1,16 @@
+{
+  "name": "dot-api-jest",
+  "version": "1.0.0",
+  "description": "DOT (Bookstore) API test using Mocha-Chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Anjar Tiyo",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^16.3.1",
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3"
+  }
+}
