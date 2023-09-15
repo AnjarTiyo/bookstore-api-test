@@ -1,12 +1,12 @@
 import "dotenv/config";
 import { generateBasicToken } from "../helpers/generate-basic-token";
 import { storeBook } from "../endpoint/store-book.endpoint";
-import { getIsbnList } from "../endpoint/list-of-book.endpoint";
+import { getIsbnList } from "../endpoint/list-of-book.endpoint.cjs";
 
 let listOfBook, basicToken, validUuid;
 
 describe("Feature: POST Store Book to User", () => {
-	before(async () => {
+	before(async function ()  {
 		basicToken = await generateBasicToken(process.env.USERNAME, process.env.PASSWORD);
 		listOfBook = await getIsbnList();
 		validUuid = process.env.UUID;
