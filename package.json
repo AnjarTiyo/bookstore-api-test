@@ -4,7 +4,7 @@
   "description": "DOT (Bookstore) API test using Mocha-Chai",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watch-all"
   },
   "author": "Anjar Tiyo",
   "license": "ISC",
